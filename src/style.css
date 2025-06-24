@@ -22,19 +22,67 @@ body {
     }
 
     nav {
-        @apply bg-transparent backdrop-blur-md shadow-md shadow-neutral-400;
+        @apply bg-neutral-100 shadow-md shadow-neutral-400;
     }
     html.dark nav {
-        @apply border-r border-l border-neutral-600 shadow-neutral-600;
+        @apply bg-neutral-900 border-r border-l border-neutral-600 shadow-neutral-600;
     }
 }
 
 nav {
-    width: 1400px;
-    height: 64px;
-    position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
-    border-radius: 20px;
+}
+
+.darkmode-input {
+    display: none;
+}
+
+.darkmode-label {
+    width: 68px;
+    height: 34px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.darkmode-toggle-circle {
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    left: 3px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.darkmode-toggle-svg {
+    width: 28px;
+    position: absolute;
+}
+
+.darkmode-toggle-sun {
+    margin-top: 0%;
+    transition: 0.3s ease;
+}
+
+.darkmode-toggle-moon {
+    width: 24px;
+    margin-top: -180%;
+    transition: 0.3s ease;
+}
+
+.darkmode-label {
+    position: relative;
+    display: inline-block;
+}
+
+.darkmode-input:checked + label .darkmode-toggle-circle {
+    left: 34px;
+}
+
+.darkmode-input:checked + label .darkmode-toggle-circle .darkmode-toggle-sun {
+    margin-top: 180%;
+}
+
+.darkmode-input:checked + label .darkmode-toggle-circle .darkmode-toggle-moon {
+    margin-top: 0%;
 }

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { useDark, useToggle } from "@vueuse/core";
+import HelloWorld from "./components/HelloWorld.vue";
+import Navbar from "./components/Navbar.vue";
 
 const isDark = useDark({
     onChanged(isDark) {
@@ -14,15 +16,7 @@ const toggleDark = useToggle(isDark);
 </script>
 
 <template>
-    <nav class="text-center"><h1>NAVBAR</h1></nav>
-
-    <button
-        @click="toggleDark()"
-        class="m-4 p-2 border rounded bg-neutral-200 dark:bg-neutral-700 dark:text-white"
-    >
-        Toggle to {{ isDark ? "light mode" : "dark mode" }}
-    </button>
-
+    <Navbar msg="navbar"></Navbar>
     <h1 class="text-3xl font-bold text-center">Hello world!</h1>
 </template>
 
