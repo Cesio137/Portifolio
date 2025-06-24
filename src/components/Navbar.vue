@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDark, useToggle } from "@vueuse/core";
+import { useDark } from "@vueuse/core";
 import { SunIcon, MoonIcon } from "@heroicons/vue/20/solid";
 
 defineProps<{ msg: string }>();
