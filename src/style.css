@@ -5,7 +5,7 @@
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
-  min-width: 320px;
+  min-width: 464px;
   min-height: 100vh;
 }
 
@@ -15,10 +15,10 @@ body {
 
 @layer base {
     body {
-        @apply bg-neutral-100 text-neutral-700 text-shadow-md text-shadow-neutral-100;
+        @apply bg-neutral-100 text-neutral-700;
     }
     html.dark body {
-        @apply bg-neutral-900 text-neutral-300 text-shadow-neutral-900;
+        @apply bg-neutral-900 text-neutral-300;
     }
 
     nav {
@@ -85,4 +85,8 @@ nav {
 
 .darkmode-input:checked + label .darkmode-toggle-circle .darkmode-toggle-moon {
     margin-top: 0%;
+}
+
+.card {
+    max-width: 466px;
 }
