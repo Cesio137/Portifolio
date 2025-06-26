@@ -15,7 +15,7 @@ const isDark = useDark({
 </script>
 
 <template>
-    <nav class="w-7xl h-16 pl-3 pr-3 fixed flex rounded-2xl">
+    <nav class="lg:w-5xl w-full min-w-0 h-16 pl-3 pr-3 fixed flex lg:rounded-2xl rounded-none">
         <div class="flex items-center">
             <a class="font-medium ml-0.5 mr-0.5 px-2 py-0.5 rounded">INICIO</a>
             <a class="font-medium ml-0.5 mr-0.5 px-2 py-0.5 rounded">PROJETOS</a>

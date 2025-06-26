@@ -10,7 +10,7 @@
             </span>
             
             <div class="mr-auto flex flex-col">
-                <h2 class="text-2xl font-semibold leading-none tracking-tight">Nathan Miguel</h2>
+                <h2 class="lg:text-2xl md:text-2xl sm:text-sm font-semibold leading-none tracking-tight">Nathan Miguel</h2>
                 <h3 class="text-sm text-muted-foreground">Desenvolvedor</h3>
             </div>
             <div class="ml-auto flex flex-wrap max-w-[200px] gap-1">
