@@ -15,17 +15,17 @@ const isDark = useDark({
 </script>
 
 <template>
-    <nav class="lg:w-5xl w-full min-w-0 h-16 pl-3 pr-3 fixed flex lg:rounded-2xl rounded-none">
-        <div class="flex items-center">
-            <a class="font-medium ml-0.5 mr-0.5 px-2 py-0.5 rounded">INICIO</a>
-            <a class="font-medium ml-0.5 mr-0.5 px-2 py-0.5 rounded">PROJETOS</a>
+    <nav>
+        <div class="nav-links">
+            <a>INICIO</a>
+            <a>PROJETOS</a>
         </div>
-        <div class="flex items-center ml-auto">
+        <div class="nav-configs">
             <input type="checkbox" id="darkmode-toggle" class="darkmode-input" v-model="isDark" />
-            <label for="darkmode-toggle" class="darkmode-label relative bg-neutral-200 dark:bg-neutral-700 shadow-inner shadow-neutral-400 dark:shadow-neutral-500 rounded-full">
-                <div class="darkmode-toggle-circle relative flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 rounded-full shadow-md shadow-neutral-400 dark:shadow-neutral-500">
-                    <MoonIcon class="darkmode-toggle-svg darkmode-toggle-moon fill-blue-100" />
-                    <SunIcon class="darkmode-toggle-svg darkmode-toggle-sun fill-amber-500" />
+            <label for="darkmode-toggle" class="darkmode-label">
+                <div class="darkmode-toggle-circle">
+                    <MoonIcon class="darkmode-toggle-moon" />
+                    <SunIcon class="darkmode-toggle-sun" />
                 </div>
             </label>
         </div>

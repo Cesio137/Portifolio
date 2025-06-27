@@ -2,22 +2,34 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer base {
-    nav {
-        @apply bg-neutral-100 shadow-md shadow-neutral-400;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    html.dark nav {
-        @apply bg-neutral-900 border-r border-l border-neutral-600 shadow-neutral-600;
-    }
+nav {
+    @apply lg:w-5xl w-full min-w-0 h-16
+    pl-3 pr-3 fixed flex lg:rounded-2xl rounded-none
+    bg-neutral-100 shadow-md shadow-neutral-400;
+    left: 50%;
+    transform: translateX(-50%);
+}
+html.dark nav {
+    @apply bg-neutral-900 border-r border-l border-neutral-600 shadow-neutral-600;
 }
 
-.darkmode-input {
+.nav-links {
+    @apply flex items-center;
+}
+.nav-links a {
+    @apply font-medium ml-0.5 mr-0.5 px-2 py-0.5 rounded;
+}
+
+.nav-configs {
+    @apply flex items-center ml-auto;
+}
+.nav-configs input {
     display: none;
 }
 
 .darkmode-label {
+    @apply relative shadow-inner rounded-full inline-block
+    bg-neutral-200 dark:bg-neutral-700 shadow-neutral-400 dark:shadow-neutral-500;
     width: 68px;
     height: 34px;
     cursor: pointer;
@@ -25,6 +37,8 @@
 }
 
 .darkmode-toggle-circle {
+    @apply relative flex items-center justify-center rounded-full shadow-md
+    bg-neutral-100 dark:bg-neutral-800 shadow-neutral-400 dark:shadow-neutral-500;
     width: 30px;
     height: 30px;
     top: 2px;
@@ -33,25 +47,20 @@
     transition: 0.3s ease;
 }
 
-.darkmode-toggle-svg {
-    width: 28px;
-    position: absolute;
-}
-
 .darkmode-toggle-sun {
+    @apply absolute
+    fill-amber-500;
+    width: 28px;
     margin-top: 0%;
     transition: 0.3s ease;
 }
 
 .darkmode-toggle-moon {
+    @apply absolute
+    fill-blue-100;
     width: 24px;
     margin-top: -180%;
     transition: 0.3s ease;
-}
-
-.darkmode-label {
-    position: relative;
-    display: inline-block;
 }
 
 .darkmode-input:checked + label .darkmode-toggle-circle {
