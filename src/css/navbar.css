@@ -2,8 +2,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*Navbar adjustments*/
 nav {
-    @apply lg:w-5xl w-full min-w-0 h-16
+    @apply lg:w-5xl w-full min-w-0 p-4
     pl-3 pr-3 fixed flex lg:rounded-2xl rounded-none
     bg-neutral-100 shadow-md shadow-neutral-400;
     left: 50%;
@@ -13,20 +14,56 @@ html.dark nav {
     @apply bg-neutral-900 border-r border-l border-neutral-600 shadow-neutral-600;
 }
 
+/*Navbar links*/
 .nav-links {
-    @apply flex items-center;
+    @apply flex flex-col justify-items-start justify-center pl-2 gap-2;
 }
-.nav-links a {
-    @apply font-medium ml-0.5 mr-0.5 px-2 py-0.5 rounded;
+.nav-links input {
+    @apply hidden;
+}
+.nav-links label {
+    @apply lg:hidden cursor-pointer;
+}
+.nav-links label > div {
+    @apply flex flex-col gap-1;
+}
+.hamburger-icon {
+    @apply w-8
+    fill-black dark:fill-white;
+}
+.x-icon {
+    @apply w-8 hidden
+    fill-black dark:fill-white;
+}
+.nav-links input:checked + label div .hamburger-icon {
+    @apply hidden;
+}
+.nav-links input:checked + label div .x-icon {
+    @apply inline;
+}
+.nav-links > div {
+    @apply lg:flex hidden flex-row items-center gap-2;
+}
+.nav-links div a {
+    @apply font-medium w-auto;
+}
+/*Navbar mobile links*/
+.nav-mobile-links {
+    @apply lg:hidden flex flex-col p-2 gap-2 transition-all duration-100;
+}
+.nav-mobile-links a {
+    @apply font-medium;
 }
 
+
 .nav-configs {
-    @apply flex items-center ml-auto;
+    @apply flex items-start ml-auto;
 }
 .nav-configs input {
     display: none;
 }
 
+/*Navbar darkmode button*/
 .darkmode-label {
     @apply relative shadow-inner rounded-full inline-block
     bg-neutral-200 dark:bg-neutral-700 shadow-neutral-400 dark:shadow-neutral-500;
