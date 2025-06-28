@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n();
 </script>
 
 <template>
@@ -11,7 +13,7 @@
             
             <div class="card-user-info">
                 <h2>Nathan Miguel</h2>
-                <h3>Desenvolvedor</h3>
+                <h3>{{ t("card.developer") }}</h3>
             </div>
             <div class="card-languages">
                 <div class="bg-blue-700">
@@ -41,8 +43,7 @@
             </div>
         </div>
         <h1 class="card-description">
-            Ola, sou desenvolvedor com foco mais voltado para backend e baixo nivel. 
-            Gosto muito de explorar novas tecnologias, principalmente na area da computação grafica.
+            {{ t("card.description") }}
         </h1>
         <div class="card-social">
             <a target="_blank" href="https://www.youtube.com/@NathanMiguel1">
@@ -54,7 +55,7 @@
                         <p>Youtube</p>
                     </h5>
                     <div>
-                        <p>Canal de programação e role-play</p>
+                        <p>{{ t("card.youtube_desc") }}</p>
                     </div>
                 </div>
             </a>
@@ -67,7 +68,7 @@
                         <p>Github</p>
                     </h5>
                     <div>
-                        <p>Veja meus repositorios e projetos</p>
+                        <p>{{ t("card.github_desc") }}</p>
                     </div>
                 </div>
             </a>
@@ -80,7 +81,7 @@
                         <p>Discord</p>
                     </h5>
                     <div>
-                        <p>Junte-se ao meu servidor e fique por dentro de tudo</p>
+                        <p>{{ t("card.discord_desc") }}</p>
                     </div>
                 </div>
             </a>
