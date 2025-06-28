@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { useDark } from "@vueuse/core";
 import { SunIcon, MoonIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/20/solid";
+import { onMounted, onUnmounted, ref } from "vue";
+
+// Refs
+const showMobileMenu = ref<boolean>(false);
+
+onMounted(function() {
+    window.addEventListener("resize", checkScreenSize);
+})
+
+onUnmounted(function() {
+  window.removeEventListener("resize", checkScreenSize);
+})
 
 const isDark = useDark({
     onChanged(isDark) {
@@ -12,13 +24,18 @@ const isDark = useDark({
     },
 });
 //const toggleDark = useToggle(isDark);
+
+// Functions
+function checkScreenSize() {
+    if (window.innerWidth > 1024) showMobileMenu.value = false;
+}
 </script>
 
 <template>
     <nav class="flex flex-col">
         <div class="w-full flex">
             <div class="nav-links">
-                <input type="checkbox" id="navmenu" class="navmenu-input"/>
+                <input type="checkbox" id="navmenu" class="navmenu-input" v-model="showMobileMenu"/>
                 <label for="navmenu">
                     <div>
                         <Bars3Icon class="hamburger-icon" />
@@ -40,7 +57,7 @@ const isDark = useDark({
                 </label>
             </div>
         </div>
-        <div class="nav-mobile-links">
+        <div class="nav-mobile-links" v-if="showMobileMenu">
             <a>INICIO</a>
             <a>PROJETOS</a>
         </div>
