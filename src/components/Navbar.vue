@@ -1,14 +1,7 @@
 <script setup lang="ts">
 import { useDark } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
-import {
-    SunIcon,
-    MoonIcon,
-    Bars3Icon,
-    XMarkIcon,
-    LanguageIcon,
-    ChevronDownIcon,
-} from "@heroicons/vue/20/solid";
+import { MenuIcon, XIcon, MoonIcon, SunIcon, LanguagesIcon, ChevronDownIcon } from "lucide-vue-next";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { onMounted, onUnmounted, ref } from "vue";
 
@@ -54,8 +47,8 @@ function checkScreenSize() {
                 <input type="checkbox" id="navmenu" class="navmenu-input" v-model="showMobileMenu" />
                 <label for="navmenu">
                     <div>
-                        <Bars3Icon class="hamburger-icon" />
-                        <XMarkIcon class="x-icon" />
+                        <MenuIcon class="hamburger-icon" />
+                        <XIcon class="x-icon" />
                     </div>
                 </label>
                 <div>
@@ -73,7 +66,7 @@ function checkScreenSize() {
                 <Menu as="div" class="locale-button">
                     <div>
                         <MenuButton as="button">
-                            <LanguageIcon as="svg" />
+                            <LanguagesIcon as="svg" />
                             {{
                                 locale === 'en' ? 'EN' :
                                     locale === 'pt' ? 'PT' :

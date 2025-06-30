@@ -3,6 +3,7 @@ import { i18n } from './i18n'
 import './style.css'
 import './css/card.css'
 import './css/navbar.css'
+import './css/projects.css'
 import App from './App.vue'
 
 createApp(App)

@@ -24,7 +24,7 @@
 }
 
 .card-user-info {
-    @apply mr-auto flex flex-col;
+    @apply mr-auto flex flex-col min-w-25;
 }
 .card-user-info h2 {
     @apply text-2xl font-semibold leading-none tracking-tight;

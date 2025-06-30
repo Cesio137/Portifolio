@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.projects-section {
+    @apply flex min-h-screen flex-col items-center justify-center;
+}

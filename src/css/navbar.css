@@ -29,11 +29,11 @@ html.dark nav {
 }
 .hamburger-icon {
     @apply w-8
-    fill-black dark:fill-white;
+    stroke-black dark:stroke-white;
 }
 .x-icon {
     @apply w-8 hidden
-    fill-black dark:fill-white;
+    stroke-black dark:stroke-white;
 }
 .nav-links input:checked + label div .hamburger-icon {
     @apply hidden;
@@ -83,7 +83,7 @@ html.dark nav {
 }
 .locale-button > div button svg {
     @apply -mr-1 h-[17px]
-    fill-black dark:fill-white;
+    stroke-black dark:stroke-white;
 }
 .locale-options {
     @apply absolute right-0 z-10 mt-2 w-20 origin-top-right divide-y ring-1 focus:outline-hidden
@@ -117,7 +117,7 @@ html.dark nav {
 
 .darkmode-toggle-sun {
     @apply absolute
-    fill-amber-500;
+    fill-amber-500 stroke-amber-500;
     width: 28px;
     margin-top: 0%;
     transition: 0.3s ease;
