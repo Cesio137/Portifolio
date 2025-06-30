@@ -42,10 +42,20 @@ html.dark nav {
     @apply inline;
 }
 .nav-links > div {
-    @apply lg:flex hidden flex-row items-center gap-2;
+    @apply lg:flex hidden flex-row items-center gap-3;
 }
-.nav-links div a {
-    @apply font-medium w-auto;
+.nav-links > div a {
+    @apply font-medium w-auto pt-[3px] cursor-pointer;
+}
+.nav-links > div a div {
+    @apply w-auto h-[3px] rounded-full transition-transform duration-200
+    bg-white;
+    transform: translateX(-50%) scaleX(0%);
+}
+.nav-links > div a:hover div {
+    @apply w-auto h-[3px] rounded-full
+    bg-white;
+    transform: translateX(0);
 }
 /*Navbar mobile links*/
 .nav-mobile-links {

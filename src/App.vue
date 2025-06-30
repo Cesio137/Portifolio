@@ -5,9 +5,9 @@ import Card from "./components/Card.vue";
 </script>
 
 <template>
-    <Navbar></Navbar>
-    <main class="flex min-h-screen flex-col items-center justify-center">
-        <Card></Card>
+    <Navbar />
+    <main>
+        <Card />
     </main>
 </template>
 
