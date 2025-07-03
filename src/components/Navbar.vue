@@ -7,10 +7,6 @@ import { onMounted, onUnmounted, ref } from "vue";
 
 // Vars
 const { t, locale } = useI18n();
-const sections = [
-  { id: 'about', label: 'nav.about' },
-  { id: 'projects', label: 'nav.projects' },
-]
 
 // Refs
 const showMobileMenu = ref<boolean>(false);
