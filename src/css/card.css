@@ -4,6 +4,8 @@
 
 .card-section {
     @apply flex min-h-screen flex-col items-center justify-center;
+    padding-top: 80px; /* altura da navbar */
+    box-sizing: border-box;
 }
 
 .card {
@@ -105,7 +107,7 @@
         @apply text-sm;
     }
 }
-
+/*
 @media (max-width: 415px) or (max-height: 700px) {
     .card {
         @apply mt-20;
