@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Navbar from "./components/Navbar.vue";
 import Card from "./components/Card.vue";
+import Projects from "./components/Projects.vue";
+import Footer from "./components/Footer.vue";
 
 </script>
 
@@ -8,7 +10,9 @@ import Card from "./components/Card.vue";
     <Navbar />
     <main>
         <Card />
+        <Projects />
     </main>
+    <Footer />
 </template>
 
 <style scoped>

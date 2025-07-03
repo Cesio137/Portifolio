@@ -4,6 +4,7 @@ import './style.css'
 import './css/card.css'
 import './css/navbar.css'
 import './css/projects.css'
+import './css/searchbar.css'
 import App from './App.vue'
 
 createApp(App)

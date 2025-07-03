@@ -12,6 +12,18 @@ const messages = {
             youtube_desc: "Programming and role-play channel",
             github_desc: "Check out my projects",
             discord_desc: "Join my server and stay up to date with everything"
+        },
+        proj: {
+            my_proj: "Pinned projects",
+            placeholder: "Search projects by name, description, language or tags...",
+            loading: "loading...",
+            nores: "No projects found for your search",
+            noproj: 'No projects available',
+            clearsearch: "Clear search",
+            viewOnGithub: "View on GitHub →"
+        },
+        footer: {
+            rights: "All rights reserved."
         }
     },
     pt: {
@@ -25,6 +37,18 @@ const messages = {
             youtube_desc: "Canal de programação e role-play",
             github_desc: "Veja meus projetos",
             discord_desc: "Junte-se ao meu servidor e fique por dentro de tudo"
+        },
+        proj: {
+            my_proj: "Projetos fixados",
+            placeholder: "Buscar projetos por nome, descrição, linguagem ou tags...",
+            loading: "carregando...",
+            nores: "Nenhum projeto encontrado para sua busca",
+            noproj: 'Nenhum projeto disponível',
+            clearsearch: "Limpar busca",
+            viewOnGithub: "Ver no GitHub →"
+        },
+        footer: {
+            rights: "Todos os direitos reservados."
         }
     },
 }

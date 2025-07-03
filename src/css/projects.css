@@ -5,3 +5,59 @@
 .projects-section {
     @apply flex min-h-screen flex-col items-center justify-center;
 }
+
+.project {
+    @apply md:mx-8 mx-4 md:max-w-4xl w-full flex flex-col items-center;
+}
+.project h2 {
+    @apply text-3xl lg:text-4xl font-bold mb-8 text-center;
+}
+
+.project-loading {
+    @apply flex justify-center;
+}
+.project-loading div {
+    @apply flex flex-col items-center gap-4;
+}
+.project-loading span {
+    @apply text-neutral-700 dark:text-neutral-300;
+}
+.project-loading-icon {
+    @apply w-8 h-8 animate-spin
+    text-neutral-700 dark:text-neutral-300;
+}
+
+.project-fetch-fail {
+    @apply text-center flex flex-col items-center gap-6 mt-16
+    text-neutral-700 dark:text-neutral-300;
+}
+.project-fetch-fail span {
+    @apply text-6xl;
+}
+.project-fetch-fail p {
+    @apply text-lg;
+}
+.project-fetch-fail button {
+    @apply px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-3  border
+    bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700  text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-700;
+}
+.project-fetch-fail-icon {
+    @apply w-5 h-5 transition-transform duration-300 group-hover:rotate-180;
+}
+
+.projects-card {
+    @apply bg-white w-full flex flex-col items-center;
+}
+.projects-card article {
+    @apply rounded-lg p-6 transition-all duration-300 hover:shadow-lg border transform hover:-translate-y-1
+    bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700;
+}
+.projects-card article > div {
+    @apply flex flex-col;
+}
+
+@media (max-width: 933px) {
+    .projects-card {
+        max-width: 90%;
+    }
+}
