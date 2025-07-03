@@ -62,7 +62,7 @@ html.dark nav {
     @apply flex flex-col p-2 gap-2;
 }
 .nav-mobile-links a {
-    @apply font-medium;
+    @apply font-medium cursor-pointer;
 }
 
 
