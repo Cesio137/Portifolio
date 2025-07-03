@@ -5,7 +5,12 @@ import { MenuIcon, XIcon, MoonIcon, SunIcon, LanguagesIcon, ChevronDownIcon } fr
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 import { onMounted, onUnmounted, ref } from "vue";
 
+// Vars
 const { t, locale } = useI18n();
+const sections = [
+  { id: 'about', label: 'nav.about' },
+  { id: 'projects', label: 'nav.projects' },
+]
 
 // Refs
 const showMobileMenu = ref<boolean>(false);
@@ -35,8 +40,14 @@ function toggleLanguage(lang: "en" | "pt") {
     locale.value = lang;
     localStorage.setItem('language', lang);
 }
+
 function checkScreenSize() {
     if (window.innerWidth > 1024) showMobileMenu.value = false;
+}
+
+function scrollToSection(id: string) {
+  const element = document.getElementById(id);
+  element?.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 
@@ -52,11 +63,11 @@ function checkScreenSize() {
                     </div>
                 </label>
                 <div>
-                    <a>
+                    <a @click="scrollToSection('about')">
                         <p>{{ t("nav.home") }}</p>
                         <div />
                     </a>
-                    <a>
+                    <a @click="scrollToSection('projects')">
                         <p>{{ t("nav.projects") }}</p>
                         <div />
                     </a>
@@ -96,8 +107,8 @@ function checkScreenSize() {
             </div>
         </div>
         <div class="nav-mobile-links" v-if="showMobileMenu">
-            <a>{{ t("nav.home") }}</a>
-            <a>{{ t("nav.projects") }}</a>
+            <a @click="scrollToSection('about')">{{ t("nav.home") }}</a>
+            <a @click="scrollToSection('projects')">{{ t("nav.projects") }}</a>
         </div>
     </nav>
 </template>

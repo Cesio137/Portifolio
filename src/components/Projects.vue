@@ -51,7 +51,7 @@ function getHostname(url: string):string {
     <section id="projects" class="projects-section">
         <div class="project">
             <h2>{{ t("proj.my_proj") }}</h2>
-            <Searchbar v-if="!isLoading && !error" v-model="searchQuery" :placeholder="t('proj.placeholder')" />
+            <Searchbar class="projects-searchbar" v-if="!isLoading && !error" v-model="searchQuery" :placeholder="t('proj.placeholder')" />
 
             <div v-if="isLoading" class="project-loading">
                 <div>
@@ -117,7 +117,7 @@ function getHostname(url: string):string {
                         <div class="mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-700">
                             <a :href="repo.url" target="_blank" rel="noopener noreferrer"
                                 class="text-sm text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors hover-underline">
-                                {{ t('projects.viewOnGithub') }}
+                                {{ t('proj.viewOnGithub') }}
                             </a>
                         </div>
                     </div>

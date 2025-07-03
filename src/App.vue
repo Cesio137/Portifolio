@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import Navbar from "./components/Navbar.vue";
 import Card from "./components/Card.vue";
-import Projects from "./components/Projects.vue";
 import Footer from "./components/Footer.vue";
+import { defineAsyncComponent } from "vue";
 
+const Projects = defineAsyncComponent(function() { return import('./components/Projects.vue') });
 </script>
 
 <template>

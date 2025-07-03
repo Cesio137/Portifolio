@@ -101,10 +101,6 @@
 }
 
 @media (max-width: 500px) {
-    .card {
-        max-width: 90%;
-    }
-
     .card-user-info h2 {
         @apply text-sm;
     }

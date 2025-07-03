@@ -7,10 +7,14 @@
 }
 
 .project {
-    @apply md:mx-8 mx-4 md:max-w-4xl w-full flex flex-col items-center;
+    @apply md:mx-8 mx-4 md:max-w-4xl w-full pl-4 pr-4 flex flex-col items-center;
 }
 .project h2 {
     @apply text-3xl lg:text-4xl font-bold mb-8 text-center;
+}
+
+.projects-searchbar {
+    @apply w-xl;
 }
 
 .project-loading {
@@ -46,18 +50,12 @@
 }
 
 .projects-card {
-    @apply bg-white w-full flex flex-col items-center;
+    @apply flex flex-col items-center gap-6;
 }
 .projects-card article {
-    @apply rounded-lg p-6 transition-all duration-300 hover:shadow-lg border transform hover:-translate-y-1
+    @apply lg:w-4xl w-full rounded-lg p-6 transition-all duration-300 hover:shadow-lg border transform hover:-translate-y-1
     bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700;
 }
 .projects-card article > div {
     @apply flex flex-col;
-}
-
-@media (max-width: 933px) {
-    .projects-card {
-        max-width: 90%;
-    }
 }

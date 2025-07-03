@@ -14,7 +14,7 @@ const messages = {
             discord_desc: "Join my server and stay up to date with everything"
         },
         proj: {
-            my_proj: "Pinned projects",
+            my_proj: "My projects",
             placeholder: "Search projects by name, description, language or tags...",
             loading: "loading...",
             nores: "No projects found for your search",
@@ -39,7 +39,7 @@ const messages = {
             discord_desc: "Junte-se ao meu servidor e fique por dentro de tudo"
         },
         proj: {
-            my_proj: "Projetos fixados",
+            my_proj: "Meus projetos",
             placeholder: "Buscar projetos por nome, descrição, linguagem ou tags...",
             loading: "carregando...",
             nores: "Nenhum projeto encontrado para sua busca",
