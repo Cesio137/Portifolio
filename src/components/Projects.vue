@@ -92,11 +92,11 @@ function getHostname(url: string):string {
                                 </div>
                             </div>
                             <div class="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
-                                <span class="flex items-center gap-1" :title="t('projects.stars')">
+                                <span class="flex items-center gap-1">
                                     <Star class="w-4 h-4" />
                                     {{ repo.stars }}
                                 </span>
-                                <span class="flex items-center gap-1" :title="t('projects.forks')">
+                                <span class="flex items-center gap-1">
                                     <GitFork class="w-4 h-4" />
                                     {{ repo.forks }}
                                 </span>
