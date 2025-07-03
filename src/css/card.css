@@ -7,7 +7,7 @@
 }
 
 .card {
-    @apply rounded-lg border-1 shadow-lg transition-all duration-100
+    @apply ml-4 mr-4 rounded-lg border-1 shadow-lg transition-all duration-100
     border-neutral-300 dark:border-neutral-600  shadow-neutral-400 dark:shadow-neutral-200/30;
     max-width: 466px;
 }
@@ -106,8 +106,8 @@
     }
 }
 
-@media (max-height: 640px) {
+@media (max-width: 415px) or (max-height: 700px) {
     .card {
-        transform: translateY(68px);
+        @apply mt-20;
     }
 }
