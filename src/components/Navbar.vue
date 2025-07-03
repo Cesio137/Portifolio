@@ -48,7 +48,7 @@ function scrollToSection(id: string) {
 </script>
 
 <template>
-    <nav class="sticky top-0 inset-x-0 flex flex-col z-10">
+    <nav class="sticky top-0 inset-x-0 flex flex-col z-10" :style="{ height: showMobileMenu ? '156px' : '68px' }">
         <div class="w-full flex">
             <div class="nav-links">
                 <input type="checkbox" id="navmenu" class="navmenu-input" v-model="showMobileMenu" />
