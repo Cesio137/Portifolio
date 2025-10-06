@@ -16,5 +16,8 @@ const Projects = defineAsyncComponent(function() { return import('./components/P
     <Footer />
 </template>
 
-<style scoped>
+<style>
+body {
+    @apply antialiased;
+}
 </style>
