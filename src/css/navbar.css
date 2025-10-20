@@ -4,10 +4,8 @@
 
 nav {
     @apply w-full min-w-0 p-4
-    xl:px-[calc((100vw-1280px)/2)] fixed flex lg:rounded-2xl rounded-none transition-all
+    lg:px-[calc((100vw-900px)/2)] fixed flex lg:rounded-2xl rounded-none transition-all
     bg-neutral-100 dark:bg-neutral-900 shadow-md shadow-neutral-300 dark:shadow-neutral-700;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 /*Navbar links*/
