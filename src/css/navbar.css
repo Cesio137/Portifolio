@@ -2,16 +2,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/*Navbar adjustments*/
 nav {
-    @apply lg:w-5xl w-full min-w-0 p-4
-    pl-3 pr-3 fixed flex lg:rounded-2xl rounded-none transition-all
-    bg-neutral-100 shadow-md shadow-neutral-400;
+    @apply w-full min-w-0 p-4
+    xl:px-[calc((100vw-1280px)/2)] fixed flex lg:rounded-2xl rounded-none transition-all
+    bg-neutral-100 dark:bg-neutral-900 shadow-md shadow-neutral-300 dark:shadow-neutral-700;
     left: 50%;
     transform: translateX(-50%);
-}
-html.dark nav {
-    @apply bg-neutral-900 border-r border-l border-neutral-600 shadow-neutral-600;
 }
 
 /*Navbar links*/
@@ -49,12 +45,12 @@ html.dark nav {
 }
 .nav-links > div a div {
     @apply w-auto h-[3px] rounded-full transition-transform duration-200
-    bg-white;
+    bg-neutral-500 dark:bg-white;
     transform: translateX(-50%) scaleX(0%);
 }
 .nav-links > div a:hover div {
     @apply w-auto h-[3px] rounded-full
-    bg-white;
+    bg-neutral-500 dark:bg-white;
     transform: translateX(0);
 }
 /*Navbar mobile links*/
