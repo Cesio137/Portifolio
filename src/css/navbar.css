@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));*
 
 nav {
-    @apply w-full min-w-0 p-4
-    lg:px-[calc((100vw-900px)/2)] fixed flex lg:rounded-2xl rounded-none transition-all
+    @apply w-full min-w-0 p-4 sticky top-0 inset-x-0 z-10
+    lg:px-[calc((100vw-900px)/2)] flex flex-col lg:rounded-b-2xl rounded-none
     bg-neutral-100 dark:bg-neutral-900 shadow-md shadow-neutral-300 dark:shadow-neutral-700;
+    transition: height 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /*Navbar links*/
@@ -42,7 +43,7 @@ nav {
     @apply font-medium w-auto pt-[3px] cursor-pointer;
 }
 .nav-links > div a div {
-    @apply w-auto h-[3px] rounded-full transition-transform duration-200
+    @apply w-auto h-[3px] rounded-full
     bg-neutral-500 dark:bg-white;
     transform: translateX(-50%) scaleX(0%);
 }
@@ -105,7 +106,6 @@ nav {
     height: 30px;
     top: 2px;
     overflow: hidden;
-    transition: transform 0.3s ease;
     transform: translateX(3px);
 }
 
@@ -113,7 +113,6 @@ nav {
     @apply absolute
     fill-amber-500 stroke-amber-500;
     width: 28px;
-    transition: transform 0.3s ease;
     transform: translateY(0%);
 }
 
@@ -121,7 +120,6 @@ nav {
     @apply absolute
     fill-blue-100;
     width: 24px;
-    transition: transform 0.3s ease;
     transform: translateY(-180%);
 }
 

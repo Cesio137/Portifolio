@@ -9,7 +9,7 @@
 }
 
 .card {
-    @apply ml-4 mr-4 rounded-lg border-1 shadow-lg duration-100
+    @apply ml-4 mr-4 rounded-lg border shadow-lg
     border-neutral-300 dark:border-neutral-600  shadow-neutral-400 dark:shadow-neutral-200/30;
     max-width: 466px;
 }
@@ -19,7 +19,7 @@
 }
 
 .card-user-photo {
-    @apply relative flex h-12 w-12 shrink-0 overflow-hidden rounded-full;
+    @apply flex h-12 w-12 shrink-0 overflow-hidden rounded-full;
 }
 .card-user-photo img {
     @apply aspect-square h-full w-full;
@@ -47,7 +47,7 @@
 }
 
 .card-description {
-    @apply p-6 pt-0 break-words text-justify;
+    @apply p-6 pt-0 wrap-break-word text-justify;
 }
 
 .card-main-social {
@@ -62,14 +62,16 @@
 .card-main-social a div h5 svg {
     @apply pb-1.5 fill-black dark:fill-white;
 }
+/*
 .card-main-social a div h5 p {
     @apply text-neutral-700 dark:text-neutral-200;
 }
+*/
 .card-main-social a div div {
     @apply flex align-baseline items-center gap-2;
 }
 .card-main-social a div div p {
-    @apply text-xs text-neutral-700 dark:text-neutral-200;
+    @apply text-xs ;
 }
 .card-main-social .discord-link > div {
     @apply border-none bg-indigo-500 dark:bg-indigo-600 hover:bg-indigo-500 hover:dark:bg-indigo-600;
@@ -92,7 +94,7 @@
     @apply w-6 aspect-square  flex-col items-center justify-center;
 }
 .card-social a div {
-    @apply w-full h-[3px] rounded-full transition-all duration-200
+    @apply w-full h-[3px] rounded-full
     bg-neutral-700 dark:bg-neutral-200;
     transform: translateX(-50%) scaleX(0);
 }
@@ -100,8 +102,7 @@
     transform: translateX(0) scaleX(100%);
 }
 .card-social a svg {
-    @apply duration-200 text-neutral-700 dark:text-white
-    dark:hover:stroke-white;
+    @apply dark:hover:stroke-white;
 }
 
 @media (max-width: 500px) {

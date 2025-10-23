@@ -34,7 +34,7 @@ const isDark = useDark({
 // Functions
 function toggleLanguage(lang: "en" | "pt") {
     locale.value = lang;
-    localStorage.setItem('language', lang);
+    localStorage.setItem("language", lang);
 }
 
 function checkScreenSize() {
@@ -43,12 +43,12 @@ function checkScreenSize() {
 
 function scrollToSection(id: string) {
   const element = document.getElementById(id);
-  element?.scrollIntoView({ behavior: 'smooth' });
+  element?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
 <template>
-    <nav class="sticky top-0 inset-x-0 flex flex-col z-10" :style="{ height: showMobileMenu ? '156px' : '68px' }">
+    <nav :style="{ height: showMobileMenu ? '156px' : '68px' }">
         <div class="w-full flex">
             <div class="nav-links">
                 <input type="checkbox" id="navmenu" class="navmenu-input" v-model="showMobileMenu" />

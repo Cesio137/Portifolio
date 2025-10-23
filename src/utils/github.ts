@@ -11,7 +11,7 @@ export interface Repository {
     updated_at: string
     is_template: boolean
     archived: boolean
-    visibility: 'public' | 'private'
+    visibility: "public" | "private"
     default_branch: string
     homepage?: string
     topics: string[]

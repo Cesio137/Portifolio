@@ -77,7 +77,7 @@ function getHostname(url: string):string {
                             <div>
                                 <h3 class="text-2xl font-bold">
                                     <a :href="repo.url" target="_blank" rel="noopener noreferrer"
-                                        class="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors hover-underline">
+                                        class="text-neutral-900 dark:text-white hover:text-neutral-600 dark:hover:text-neutral-300 hover-underline">
                                         {{ repo.name }}
                                     </a>
                                 </h3>
@@ -86,7 +86,7 @@ function getHostname(url: string):string {
                                 </p>
                                 <div v-if="repo.homepage" class="mt-2">
                                     <a :href="repo.homepage" target="_blank" rel="noopener noreferrer"
-                                        class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">
+                                        class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">
                                         {{ getHostname(repo.homepage) }}
                                     </a>
                                 </div>
@@ -116,7 +116,7 @@ function getHostname(url: string):string {
                         </div>
                         <div class="mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-700">
                             <a :href="repo.url" target="_blank" rel="noopener noreferrer"
-                                class="text-sm text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors hover-underline">
+                                class="text-sm text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white hover-underline">
                                 {{ t('proj.viewOnGithub') }}
                             </a>
                         </div>

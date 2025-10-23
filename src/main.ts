@@ -7,6 +7,4 @@ import './css/projects.css'
 import './css/searchbar.css'
 import App from './App.vue'
 
-createApp(App)
-.use(i18n)
-.mount('#app');
+createApp(App).use(i18n).mount('#app');

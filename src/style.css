@@ -10,14 +10,11 @@ body {
 }
 
 * {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  @apply transition-all duration-300 text-neutral-800 dark:text-neutral-200
 }
 
 @layer base {
     body {
-        @apply bg-neutral-100 text-neutral-700;
-    }
-    html.dark body {
-        @apply bg-neutral-900 text-neutral-300;
+        @apply bg-neutral-100 dark:bg-neutral-900;
     }
 }

@@ -8,9 +8,9 @@ const { t } = useI18n();
     <section id="about" class="card-section">
         <div class="card">
             <div class="space-y-1.5 p-6 flex flex-row justify-center gap-1 items-center">
-                <span class="card-user-photo">
+                <div class="card-user-photo">
                     <img src="../assets/Photo.png" alt="@NathanMiguel" />
-                </span>
+                </div>
 
                 <div class="card-user-info">
                     <h2>Nathan Miguel</h2>

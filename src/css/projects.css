@@ -42,18 +42,18 @@
     @apply text-lg;
 }
 .project-fetch-fail button {
-    @apply px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-3  border
+    @apply px-6 py-3 rounded-full transform hover:scale-105 flex items-center gap-3  border
     bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700  text-neutral-900 dark:text-white border-neutral-200 dark:border-neutral-700;
 }
 .project-fetch-fail-icon {
-    @apply w-5 h-5 transition-transform duration-300 group-hover:rotate-180;
+    @apply w-5 h-5 group-hover:rotate-180;
 }
 
 .projects-card {
     @apply flex flex-col items-center gap-6;
 }
 .projects-card article {
-    @apply lg:w-4xl w-full rounded-lg p-6 transition-all duration-300 hover:shadow-lg border transform hover:-translate-y-1
+    @apply lg:w-4xl w-full rounded-lg p-6 hover:shadow-lg border transform hover:-translate-y-1
     bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-700;
 }
 .projects-card article > div {
